@@ -1,2 +1,2 @@
 # openmp-meet-in-the-middle
-Parallel Meet in the middle with OpenMp
+Parallelzied Meet in the Middle algorithm with OpenMp
