@@ -51,7 +51,7 @@ int numberOfWays(vector < int > x, int C) {
   ctime = omp_get_wtime() - startTime;
   cout << ctime << endl;
 
-  startTime = omp_get_wtime();#
+  startTime = omp_get_wtime();
   # pragma omp parallel for
   for (int i = 0; i < (1 << n2); i++) {
     b[i] = 0;
