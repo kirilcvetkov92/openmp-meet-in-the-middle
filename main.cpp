@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 
 #include <vector>
 
@@ -63,11 +63,11 @@ int numberOfWays(vector < int > x, int C) {
   ctime = omp_get_wtime() - startTime;
   cout << ctime << endl;
 
-  startTime = omp_get_wtime();#
+  startTime = omp_get_wtime();
   # pragma omp parallel sections {
 
     # pragma omp section
-    sort(b.begin(), b.begin() + (1 << n2) / 4 - 1);#
+    sort(b.begin(), b.begin() + (1 << n2) / 4 - 1);
     # pragma omp section
     sort(b.begin() + (1 << n2) / 4, b.begin() + 2 * (1 << n2) / 4 - 1);
     # pragma omp section
@@ -91,7 +91,7 @@ int numberOfWays(vector < int > x, int C) {
   cout << ctime << endl;
 
   int ans = 0;
-  startTime = omp_get_wtime();#
+  startTime = omp_get_wtime();
   # pragma omp parallel
   for reduction(+: ans)
   for (unsigned int i = 0; i < a.size(); i++) {
