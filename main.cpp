@@ -92,8 +92,7 @@ int numberOfWays(vector < int > x, int C) {
 
   int ans = 0;
   startTime = omp_get_wtime();
-  # pragma omp parallel
-  for reduction(+: ans)
+  # pragma omp parallel for reduction(+: ans)
   for (unsigned int i = 0; i < a.size(); i++) {
     int mi = 0, ma = vNew.size() - 1, av;
     while (mi < ma) {
